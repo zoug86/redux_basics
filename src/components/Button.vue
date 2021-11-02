@@ -4,7 +4,7 @@
     :style="{
       background: color,
     }"
-    @click="onClick()"
+    @click="$emit('toggle')"
   >
     {{ text }}
   </button>
@@ -16,11 +16,6 @@ export default {
   props: {
     text: String,
     color: String,
-  },
-  methods: {
-    onClick() {
-      console.log("click");
-    },
   },
 };
 </script>
